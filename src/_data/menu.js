@@ -1,0 +1,7 @@
+export default [
+  { name: 'people', url: '/people/' },
+  { name: 'publications', url: '/publications/' },
+  { name: 'courses', url: '/courses/' },
+  { name: 'cv', url: '/cv/' },
+  { name: 'contact', url: '/contact/' }
+];
