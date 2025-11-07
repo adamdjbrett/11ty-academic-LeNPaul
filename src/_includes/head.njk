@@ -1,12 +1,16 @@
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
+<meta charset="UTF-8">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/libs/bootstrap/bootstrap.min.css">
-  <script defer src="/assets/libs/fontawesome/all.min.js"></script>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  {# Inline Bootstrap and main CSS #}
+  <style>
+    {% inlineCSS "src/assets/libs/bootstrap/bootstrap.min.css" %}
+    {% inlineCSS "src/assets/css/main.css" %}
+  </style>
+<!-- Favicon and Apple Touch Icons -->
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon.png">
+  <link rel="shortcut icon" href="/img/favicon.ico">
 </head>

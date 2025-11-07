@@ -1,2 +1,54 @@
-node_modules
+### macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+.Spotlight-V100
+.Trashes
+
+### Eleventy build output and caches
+_site/
+.cache/
+_cache/
+.11ty-cache/
+.11tycache/
+package-lock.json
+yarn.lock
+
+### Node
+node_modules/
+logs
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm
+.eslintcache
+
+### Environment files
 .env
+.env.*
+!.env.example
+
+### Editors/IDE
+.vscode/
+.idea/
+
+### Generic build artifacts (if used)
+dist/
+.parcel-cache/
+.temp/
+.tmp/
+.sass-cache/
+
+### Test/coverage (if used)
+coverage/
+.nyc_output/
+
+### Hosting/CLI state (optional)
+.netlify/
+.functions-cache/
+vercel/

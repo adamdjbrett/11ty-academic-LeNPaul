@@ -1,6 +1,6 @@
 # Academic Theme for Eleventy
 
-An Eleventy 3.1.2 theme designed for academic websites, converted from the Jekyll Academic theme.
+An Eleventy 3.1.2 theme designed for academic websites, converted from the [Jekyll Academic theme by Paul Le](https://github.com/LeNPaul/academic).
 
 ## Features
 

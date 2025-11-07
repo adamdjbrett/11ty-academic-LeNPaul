@@ -1,8 +1,8 @@
-<footer class="pt-5 my-5 text-muted border-top">
+<footer class="pt-5 my-5 text-muted border-top" role="contentinfo">
   <div class="row">
     <div class="col-md-12 text-center">
       {% for item in social %}
-        <a href="{{ item.link }}" class="ms-3 fs-5"><i class="fab fa-{{ item.icon }}"></i></a>
+        <a href="{{ item.link }}" class="ms-3 fs-5" target="_blank" title="{{ item.title }}" aria-label="Follow on {{ item.title }}"><i class="{{ item.icon }} icon-svg"></i></a>
       {% endfor %}
     </div>
   </div>

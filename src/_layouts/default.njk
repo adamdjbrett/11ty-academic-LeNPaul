@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="{{ lang | default('en-US') }}">
   {% include "head.njk" %}
+
   <body>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
       {% include "header.njk" %}
-      <main>
+        <main role="main">
         {{ content | safe }}
       </main>
+      <!-- outputs all the icons used on the page -->
+      {% getBundle "fontawesome" %}
       {% include "footer.njk" %}
     </div>
   </body>
