@@ -12,7 +12,6 @@ _site/
 _cache/
 .11ty-cache/
 .11tycache/
-package-lock.json
 yarn.lock
 
 ### Node
@@ -35,20 +34,3 @@ lerna-debug.log*
 
 ### Editors/IDE
 .vscode/
-.idea/
-
-### Generic build artifacts (if used)
-dist/
-.parcel-cache/
-.temp/
-.tmp/
-.sass-cache/
-
-### Test/coverage (if used)
-coverage/
-.nyc_output/
-
-### Hosting/CLI state (optional)
-.netlify/
-.functions-cache/
-vercel/

@@ -1,0 +1,40 @@
+---
+permalink: /pretty-atom-feed.xsl
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsl:output method="html" encoding="UTF-8" indent="yes"/>
+
+  <xsl:template match="/">
+    <html lang="en">
+      <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title><xsl:value-of select="atom:feed/atom:title"/> Feed</title>
+        <style>
+          body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 2rem auto; max-width: 50rem; padding: 0 1rem; }
+          h1 { margin-bottom: .25rem; }
+          .meta { color: #555; margin-bottom: 1.25rem; }
+          li { margin: .7rem 0; }
+          a { color: #0a58ca; text-decoration: none; }
+          a:hover { text-decoration: underline; }
+        </style>
+      </head>
+      <body>
+        <h1><xsl:value-of select="atom:feed/atom:title"/></h1>
+        <p class="meta"><xsl:value-of select="atom:feed/atom:subtitle"/></p>
+        <ol>
+          <xsl:for-each select="atom:feed/atom:entry">
+            <li>
+              <a href="{atom:link/@href}"><xsl:value-of select="atom:title"/></a>
+              <div><small><xsl:value-of select="atom:updated"/></small></div>
+            </li>
+          </xsl:for-each>
+        </ol>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>

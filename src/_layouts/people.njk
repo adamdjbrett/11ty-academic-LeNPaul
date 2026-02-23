@@ -14,7 +14,14 @@ layout: default.njk
           <p><a href="/people/{{ person.url }}/">More info</a></p>
         </div>
         <div class="col-md-6">
-          <img src="{{ person.image }}" alt="{{ person.name }}" width="100%">
+          <img
+            src="{{ person.image }}"
+            alt="{{ person.name }}"
+            width="1024"
+            height="1024"
+            class="img-fluid"
+            loading="lazy"
+            decoding="async">
         </div>
       </div>
     {% endfor %}

@@ -1,3 +1,8 @@
+---
+permalink: false
+eleventyExcludeFromCollections: true
+---
+
 # Images Directory
 
 Add your images to this directory. The theme expects the following images:

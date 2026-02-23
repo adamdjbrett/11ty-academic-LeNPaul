@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12 text-center">
       {% for item in social %}
-        <a href="{{ item.link }}" class="ms-3 fs-5" target="_blank" title="{{ item.title }}" aria-label="Follow on {{ item.title }}"><i class="{{ item.icon }} icon-svg"></i></a>
+        <a href="{{ item.link }}" class="ms-3 fs-5" target="_blank" rel="noopener noreferrer me" title="{{ item.title }}" aria-label="Follow on {{ item.title }}"><i class="{{ item.icon }} icon-svg" aria-hidden="true"></i></a>
       {% endfor %}
     </div>
   </div>

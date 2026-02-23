@@ -1,0 +1,29 @@
+---
+permalink: /humans.txt
+eleventyExcludeFromCollections: true
+---
+/* TEAM */
+Site: {{ site.title }}
+URL: {{ site.url }}
+Description: {{ site.description }}
+Author: {{ site.author }}
+
+/* AUTHORS */
+- {{ site.author }}
+
+/* CO-AUTHORS */
+- Adam DJ Brett
+
+/* CONTRIBUTORS (Git) */
+- adamdjbrett
+- Adam DJ Brett
+
+/* TECHNOLOGY */
+Engine: Eleventy 3.1.2
+Template: Nunjucks
+Date Library: Luxon
+Generated: {{ site.buildTime.toISOString() }}
+
+/* FEEDS */
+- {{ site.url }}/feed/feed.xml
+- {{ site.url }}/sitemap.xml

@@ -1,0 +1,27 @@
+---
+permalink: /feed/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/pretty-atom-feed.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+  <title>{{ site.title | escape }}</title>
+  <subtitle>{{ site.description | escape }}</subtitle>
+  <id>{{ site.url }}/feed/feed.xml</id>
+  <link rel="self" href="{{ site.url }}/feed/feed.xml" />
+  <link rel="alternate" href="{{ site.url }}/" />
+  <updated>{% if collections.posts and collections.posts[0] %}{{ collections.posts[0].date.toISOString() }}{% else %}{{ site.buildTime.toISOString() }}{% endif %}</updated>
+  <author>
+    <name>{{ site.author | escape }}</name>
+  </author>
+
+  {% for post in collections.posts %}
+  <entry>
+    <title>{{ post.data.title | escape }}</title>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <link href="{{ site.url }}{{ post.url }}" />
+    <updated>{{ post.date.toISOString() }}</updated>
+    <summary type="text">{{ (post.templateContent | striptags | truncate(220)) | escape }}</summary>
+  </entry>
+  {% endfor %}
+</feed>
